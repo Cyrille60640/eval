@@ -50,6 +50,8 @@ btn_Hold.addEventListener('click',()=>{
             player1.InitRound()
             document.querySelector(".player1_round").textContent=player1.round
             player_select=2
+            document.querySelector(".player1-panel").classList.remove('active_player')
+            document.querySelector(".player2-panel").classList.add('active_player')
             break
         case 2:
             player2.AddGlobal()
@@ -57,6 +59,8 @@ btn_Hold.addEventListener('click',()=>{
             player2.InitRound()
             document.querySelector(".player2_round").textContent=player2.round
             player_select=1
+            document.querySelector(".player1-panel").classList.add('active_player')
+            document.querySelector(".player2-panel").classList.remove('active_player')
             break
     }
 })
@@ -75,6 +79,8 @@ btn_RollDice.addEventListener('click',()=>{
                 player1.InitRound()
                 document.querySelector(".player1_round").textContent=player1.round
                 player_select=2
+                document.querySelector(".player1-panel").classList.remove('active_player')
+                document.querySelector(".player2-panel").classList.add('active_player')
             }else{
                 player1.AddRound(dice_value)
             }
@@ -86,6 +92,8 @@ btn_RollDice.addEventListener('click',()=>{
                 player2.InitRound()
                 document.querySelector(".player2_round").textContent=player2.round
                 player_select=1
+                document.querySelector(".player1-panel").classList.add('active_player')
+                document.querySelector(".player2-panel").classList.remove('active_player')
             }else{
                 player2.AddRound(dice_value)
             }
@@ -109,4 +117,6 @@ function init(){
     document.querySelector(".player2_round").textContent = 0
     document.querySelector(".player1_global").textContent =0
     document.querySelector(".player2_global").textContent =0
+    document.querySelector(".player1-panel").classList.add('active_player')
+    document.querySelector(".player2-panel").classList.remove('active_player')
 }
