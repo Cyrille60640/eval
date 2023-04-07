@@ -1,3 +1,11 @@
+/*-----Author : Cyrille Bigorgne*/
+/*-----Version : V1.0*/
+
+
+
+/*-----------*/
+/*------------GENERAL---------------*/
+/*-----------*/
 * {
     margin: 0;
     padding: 0;
@@ -7,16 +15,42 @@
 
 body{
     height: 100%;
+    width: 100%;
+    font-family: lato;
 }
 
+button {
+    width: 150px;
+    color: #555;
+    background: none;
+    border: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 250px;
+}
+
+.row{
+    height: 100%;
+}
+
+
+/*-----------*/
+/*------------Game---------------*/
+/*-----------*/
 #dice{
-    transform: translateX(-50%);
-    height: 100px;
-   /* box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);*/
+   
+   height: 100px;
+   width: 150px;
+   box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+   
 }
 
 .control_panel{
-    background-color: lightgrey;
+    position: absolute;
+    width: 200px;
+    transform: translateX(-55%);
+    left: 50%;
 }
 
 .active_player{
