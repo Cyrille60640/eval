@@ -10,7 +10,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 body{
@@ -21,13 +20,17 @@ body{
 
 button {
     width: 150px;
-    color: #555;
+    color: grey;
     background: none;
     border: none;
     font-size: 20px;
     text-transform: uppercase;
     cursor: pointer;
     font-weight: 250px;
+}
+
+i{
+    color: red;
 }
 
 .row{
@@ -38,21 +41,80 @@ button {
 /*-----------*/
 /*------------Game---------------*/
 /*-----------*/
+/*design id dice*/
 #dice{
-   
-   height: 100px;
+   height: 150px;
    width: 150px;
    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
-   
+   border: solid 1px black;
 }
 
+/*design class control_panel*/
 .control_panel{
     position: absolute;
     width: 200px;
-    transform: translateX(-55%);
+    transform: translateX(-50%);
     left: 50%;
 }
 
+
+
+/*design class player_name*/
+.player1_name,
+.player2_name {
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: -100px;
+    margin-bottom: 10px;
+}
+
+/*design class player_global*/
+.player1_global,
+.player2_global{
+    font-size: 90px;
+    font-weight: 100;
+    color: red;
+}
+
+/*design class player_round*/
+.player1_round,
+.player2_round{
+    color: white;
+}
+
+/*design class current_player*/
+.current_player{
+    font-size:20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: red;
+    text-align: center;
+    width: 30%;
+    left: 50%;
+}
+
+/*-----------*/
+/*------------Class and Id JS---------------*/
+/*-----------*/
+
+/*active -> indicates active player*/
 .active_player{
     background-color: lightgray;
+}
+
+/*active -> indicates player win*/
+.win_player{
+    background-color: goldenrod ;
+}
+
+/*div create when player win*/
+#winner{
+    position: absolute;
+    writing-mode: vertical-lr;
+    font-size: 100px;
+    margin-left: 50px;
+    color: blue;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
